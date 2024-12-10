@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Pribadi</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            color: #fff;
+            padding: 20px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            color: #fff;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            animation: fadeIn 2s ease-in;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #fff;
+            font-style: italic;
+            animation: fadeIn 3s ease-in;
+        }
+
+        header img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        section {
+            width: 48%;
+            margin-bottom: 30px;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+            animation: slideIn 1s ease-in;
+            transition: transform 0.3s ease;
+        }
+
+        section:hover {
+            transform: translateY(-10px);
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #ffdd57;
+            text-transform: uppercase;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        ul li strong {
+            color: #ffdd57;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 1.2rem;
+            color: #fff;
+        }
+
+        /* Responsiveness */
+        @media (max-width: 768px) {
+            header img {
+                width: 120px;
+                height: 120px;
+            }
+
+            section {
+                width: 100%;
+            }
+
+            .container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Gambar Pribadi -->
+        <img src="img/img1.jpg" alt="Foto Pribadi Bram Saputra Meha">
+        <h1>Bram Saputra Meha</h1>
+        <p> My Personal Data</p>
+    </header>
+
+    <div class="container">
+        <section>
+            <h2 class="section-title">Informasi Pribadi</h2>
+            <ul>
+                <li><strong>Email :</strong> brammeha2005@gmail.com</li>
+                <li><strong>Telepon :</strong> 0822 7761 0927</li>
+                <li><strong>Alamat :</strong> Medan</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2 class="section-title">Pendidikan</h2>
+            <ul>
+                <li><strong>SMA N 1 PARLILITAN</strong>, (2019-2022)</li>
+                <li><strong>SMP N 1 PARLILITAN</strong>, (2016-2019)</li>
+                <li><strong>SD N 173484 PARLILITAN</strong>, (2010-2016)</li>
+            </ul>
+        </section>
+    </div>
+
+    <div class="container">
+        <section>
+            <h2 class="section-title">Pengalaman Kerja</h2>
+            <ul>
+                <li><strong>Teknisi Elektronik</strong>, OBS Pajus (2022-Sekarang)</li>
+                <li><strong>Pro Player</strong>, Evos Esport (2021)</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2 class="section-title">Keahlian</h2>
+            <ul>
+                <li>HTML, CSS, JavaScript</li>
+                <li>Exel</li>
+                <li>Teknisi Elektronik</li>
+            </ul>
+        </section>
+    </div>
+
+    <div class="container">
+        <section>
+            <h2 class="section-title">Hobi</h2>
+            <ul>
+                <li>Membaca buku teknologi</li>
+                <li>Bermain bola</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2 class="section-title">Social Media</h2>
+            <ul>
+                <li><strong>Instagram :</strong> @bramsaputrameha_</li>
+                <li><strong>Facebook :</strong> @Bram Saputra Meha</li>
+            </ul>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <p>Terima kasih telah mengunjungi CV saya !</p>
+    </footer>
+
+    <script>
+        // Array of background image URLs
+        const backgroundImages = [
+            'url("img/img7.jpg")',
+        ];
+
+        // Function to set a random background image
+        function setRandomBackground() {
+            const randomIndex = Math.floor(Math.random() * backgroundImages.length);
+            document.body.style.backgroundImage = backgroundImages[randomIndex];
+        }
+
+        // Set a random background image when the page loads
+        setRandomBackground();
+    </script>
+</body>
+</html>
